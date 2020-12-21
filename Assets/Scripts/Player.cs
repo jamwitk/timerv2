@@ -89,19 +89,17 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-
+        isGrounded = true;
         switch (other.gameObject.tag)
         {
 
             case "Plane":
                 {
-                    isGrounded = true;
-
+                    
                     break;
                 }
             case "12Planes":
                 {
-                    isGrounded = true;
                     isJumpedToPlane = true;
                     if (other.gameObject.name=="12Plane"+buttonScript.random)
                     {
@@ -137,6 +135,7 @@ public class Player : MonoBehaviour
         moveSpeed = _moveSpeed;
         jumpForce = 20;
         isGrounded = true;
+        gameObject.transform.position = new Vector3(0,1,-8);
     }
     
    

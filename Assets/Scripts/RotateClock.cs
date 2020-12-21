@@ -8,7 +8,7 @@ public class RotateClock : MonoBehaviour
     private bool _akrep;
     private bool _yelkovan;
     public int donmeHizi;
-    private Player _player;
+    public Player _player;
     private CameraShaking _cameraShaking;
     private void Start()
     {
@@ -21,8 +21,6 @@ public class RotateClock : MonoBehaviour
         {
             _yelkovan = true;
         }
-
-        _player = GameObject.Find("Cube").GetComponent<Player>();
     }
 
     private void RotateAkrep()
@@ -48,7 +46,8 @@ public class RotateClock : MonoBehaviour
 
     public void ReverseClocks()
     {
-        donmeHizi = donmeHizi * -2;
+        donmeHizi = donmeHizi * -3 / 2;
+        
     }
     private void OnCollisionEnter(Collision other)
     {
