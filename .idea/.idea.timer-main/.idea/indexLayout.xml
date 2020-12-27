@@ -18,9 +18,9 @@
       <Path>.git</Path>
       <Path>.idea</Path>
       <Path>Library</Path>
-      <Path>Recordings</Path>
       <Path>Temp</Path>
       <Path>obj</Path>
+      <Path>old</Path>
     </explicitExcludes>
   </component>
 </project>

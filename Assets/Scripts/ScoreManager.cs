@@ -1,16 +1,16 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Transactions;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public GameObject ScoreComboObject;
+    public GameObject scoreComboObject;
     public Text scoreTxt,scoreComboTxt;
-    [NonSerialized] public int Score, ScoreIncrease = 1,ScoreCombo , _score;
+    [NonSerialized] public int Score;
+    [NonSerialized] private int _scoreIncrease = 1;
+    [NonSerialized] public int ScoreCombo;
+    [NonSerialized] private int _score;
     public RotateClock[] clocks;
     private void Start()
     {
@@ -19,44 +19,40 @@ public class ScoreManager : MonoBehaviour
 
     public void ScoreCalculation()
     {
-        Score = Score + (46*ScoreIncrease);
-        _score = _score + (46 * ScoreIncrease);
+        Score += 46 * _scoreIncrease; 
+        _score += (46 * _scoreIncrease);
         scoreTxt.text =""+Score;
+
+        if (ScoreCombo != 4) return;
         
-        if (ScoreCombo == 4)
-        {
-            ScoreIncrease = ScoreIncrease + 1; // plus increase
-            ScoreCombo = 0; // Setting combo zero
-            scoreComboTxt.text = "COMBO "+ ScoreIncrease + "X"; // Write combo number on TextBox
-            ScoreComboObject.SetActive(true); // Show on screen
-            PunchText(ScoreComboObject.transform); // Animate
-        }
-        
+        _scoreIncrease += 1; // plus increase
+        ScoreCombo = 0; // Setting combo zero
+        scoreComboTxt.text = "COMBO "+ _scoreIncrease + "X"; // Write combo number on TextBox
+        scoreComboObject.SetActive(true); // Show on screen
+        PunchText(scoreComboObject.transform); // Animate
+
     }
 
     private void Update()
     {
         //Check for reach 1000 , 20000, 3000 etc
-        if (_score >= 1000)
-        {
-            _score -= 1000;
-            clocks[0].ReverseClocks(); // reverse for akrep
-            clocks[1].ReverseClocks(); // reverse for yelkovan
-        }
-
+        if (_score < 1000) return;
+        _score -= 1000;
+        clocks[0].ReverseClocks(); // reverse for Akrep
+        clocks[1].ReverseClocks(); // reverse for Yelkovan
     }
 
     public void ResetText()
     {
         Score = 0;
         _score = 0;
-        ScoreIncrease = 1;
+        _scoreIncrease = 1;
         ScoreCombo = 0;
-        ScoreComboObject.SetActive(false);
+        scoreComboObject.SetActive(false);
         scoreTxt.text = "" + Score;
     }
- 
-    void PunchText(Transform comboText)
+
+    private void PunchText(Transform comboText)
     {
         //Combo animation
        comboText.DOPunchScale(transform.localScale, 0.7f);

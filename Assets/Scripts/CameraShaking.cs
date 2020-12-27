@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using DG.Tweening;
 public class CameraShaking : MonoBehaviour
 {
-    public float CameraPower;
-    public float CameraDuration;
+    public float cameraPower;
+    public float cameraDuration;
     void Start()
     {
         DOTween.Init();
@@ -13,7 +11,7 @@ public class CameraShaking : MonoBehaviour
 
     public void CameraShake()
     {
-        transform.DOShakePosition(CameraDuration,CameraPower);
+        transform.DOShakePosition(cameraDuration,cameraPower);
         
     }
 }

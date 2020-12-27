@@ -1,56 +1,54 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
-using Random = System.Random;
+using Random = UnityEngine.Random;
 
 public class ButtonScript : MonoBehaviour
 {
-    public Player _player;
+    public Player player;
     private RotateClock _rotateClock;
-    private ChangeMaterial _changeMaterial;
-    private Random _random;
-    public GameObject[] planes;
-    [NonSerialized]public int random;
+    public ChangeMaterial[] planes;
+    [HideInInspector]public int random;
 
     private void Start()
     {
-        _random = new Random();
+        SettingDefaultMaterials();
         _ChangeToCustom();
     }
+
+   
+
+    private int RandomMaterialIndex()
+    {
+        return Random.Range(0, planes[0].materials.Length);
+    }
+
     public void RandomizePlanes()
     {
-        for (int i = 0; i < 12; i++)
+        random = RandomMaterialIndex();
+        for (var i = 0; i < 12; i++)
         {
-            planes[i].GetComponent<ChangeMaterial>().RandomMaterial();
+            planes[i].RandomMaterial(random);
         }
     }
 
-    public int RandomCustomIndex()
+    private static int RandomCustomIndex()
     {
-        return _random.Next(11);
+        return Random.Range(0,12);
     }
-    public void SettingDafueltMaterials()
+    public void SettingDefaultMaterials()
     {
-        for (int i = 0; i < planes.Length; i++)
+        foreach (var plane in planes)
         {
-           
-                planes[i].GetComponent<ChangeMaterial>().GetDefaultMaterial();
-            
+            plane.GetDefaultMaterial();
         }
     }
     public void _ChangeToCustom()
     {
-       
-        if (_player.isJumpedToPlane)
-        {
-            random = RandomCustomIndex();
-            planes[random].GetComponent<ChangeMaterial>().ChangeToCustom();
-            _player.isJumpedToPlane = false;
-        }
-        
+        if (!player.isJumpedToPlane) return;
+        random = RandomCustomIndex();
+        planes[random].ChangeToCustom();
+        player.isJumpedToPlane = false;
+
     }
 
 

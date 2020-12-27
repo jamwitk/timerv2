@@ -8,31 +8,40 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public ScoreManager _ScoreManager;
-    public CameraShaking _cameraShaking;
-    private float gravityModifier = 10;
+    public ParticleSystem particleSystem;
+    public ScoreManager scoreManager;
+    public CameraShaking cameraShaking;
     
     public float moveSpeed;
     public float jumpForce;
-    public GameObject GameOverPanel;
-    public bool isGrounded;
-    private bool _isCrunched;
-    private MeshRenderer _meshRenderer;
-    private float _moveSpeed;
+    public GameObject gameOverPanel;
+    [HideInInspector] public bool isGrounded;
+    [HideInInspector] public bool isCrunched;
+    
+    public float _moveSpeed;
     private Vector3 _movement = Vector3.zero;
-    public RotateClock[] clocks;
+   
     public ButtonScript buttonScript;
+    
+    [HideInInspector] public bool isJumpedToPlane = true;
+    public RotateClock[] clocks;
+    
+    public GameObject spaceButton;
+    public GameObject joystick;
+    public GameObject pauseButton;
+    
     private Rigidbody _rigidbody;
-    [NonSerialized]
-    public bool isJumpedToPlane = true;
+    private float gravityModifier = 10;
+    
+    private AudioManager audioManager;
     void Start()
     {
+        audioManager = AudioManager.Instance;
+        
         _moveSpeed = moveSpeed;
         
         _rigidbody = GetComponent<Rigidbody>();
         Physics.gravity *= gravityModifier;
-       
-        
     }
 
     private void Update()
@@ -41,7 +50,7 @@ public class Player : MonoBehaviour
         WalkAround();
         
         //Jumping every second
-        if (isGrounded && !_isCrunched)
+        if (isGrounded && !isCrunched)
         {
             StartCoroutine(JumpEverySecond());
         }
@@ -49,19 +58,21 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
              moveSpeed = 0;
-            _isCrunched = true;
+            isCrunched = true;
         }
         else if (Input.GetKeyUp(KeyCode.Space))
         {
             moveSpeed = _moveSpeed;
-            _isCrunched = false;
+            isCrunched = false;
         }
 
         
         if (transform.position.y<=-1)
         {
             PauseGame();
-            _cameraShaking.CameraShake();
+            cameraShaking.CameraShake();
+            Invoke(nameof(_GameOverPanel),0.75f);
+            
             transform.position = new Vector3(0, 1, -8);
 
         }
@@ -82,8 +93,8 @@ public class Player : MonoBehaviour
 
     private IEnumerator JumpEverySecond()
     {
-        _rigidbody.AddForce(Vector3.up * jumpForce,ForceMode.Impulse);
         isGrounded = false;
+        _rigidbody.AddForce(Vector3.up * jumpForce,ForceMode.Impulse);
         yield return new WaitForSeconds(1f);
     }
 
@@ -92,54 +103,54 @@ public class Player : MonoBehaviour
         isGrounded = true;
         switch (other.gameObject.tag)
         {
-
-            case "Plane":
-                {
-                    
-                    break;
-                }
             case "12Planes":
                 {
                     isJumpedToPlane = true;
                     if (other.gameObject.name=="12Plane"+buttonScript.random)
                     {
-                        
+                        particleSystem.Play();
+                        particleSystem.transform.position = transform.position;
+                        Invoke(nameof(StopParticle),0.5f);
+                        audioManager.Play("JumpPlane");
                         buttonScript.planes[buttonScript.random].GetComponent<ChangeMaterial>().SetToDefault();
                         buttonScript._ChangeToCustom(); // Selecting next red random material
-                        _ScoreManager.ScoreCombo++; //adding 100 score 
-                        _ScoreManager.ScoreCalculation(); // Calculating Scores
+                        scoreManager.ScoreCombo++; //adding 100 score 
+                        scoreManager.ScoreCalculation(); // Calculating Scores
                     }
                     break;
                 }
         }
     }
 
+    public void StopParticle()
+    {
+        particleSystem.Stop();
+    }
     public void PauseGame()
     {
-        //Write "You died text"
-        clocks[0].donmeHizi = 0;
-        clocks[1].donmeHizi = 0;
+        pauseButton.SetActive(false);
+        joystick.SetActive(false);
+        spaceButton.SetActive(false);
+        clocks[0].rotateSpeed = 0;
+        clocks[1].rotateSpeed = 0;
         moveSpeed = 0;
         jumpForce = 0;
         isJumpedToPlane = true;
-        Invoke("_GameOverPanel",0.75f); // 0.75f saniye sonra '_GameOverPanel' metodu çalışır
-        //_ScoreManager.SetGameOverText(); // Sahnedeki toplam skoru GameOverPanelindeki textboxa aktarmak için
+       
     }
 
-    private void _GameOverPanel()
+    public void _GameOverPanel()
     {
-        GameOverPanel.SetActive(true);
+        gameOverPanel.SetActive(true);
     }
     public void RestartCharacter()
     {
+        // pauseButton.SetActive(true);
+        // joystick.SetActive(true);
+        // spaceButton.SetActive(true);
         moveSpeed = _moveSpeed;
         jumpForce = 20;
         isGrounded = true;
         gameObject.transform.position = new Vector3(0,1,-8);
     }
-    
-   
-    
-
-
 }

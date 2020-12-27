@@ -7,11 +7,14 @@ public class RotateClock : MonoBehaviour
 {
     private bool _akrep;
     private bool _yelkovan;
-    public int donmeHizi;
-    public Player _player;
+    public int rotateSpeed;
+    public Player player;
     private CameraShaking _cameraShaking;
+    private AudioManager audioManager;
     private void Start()
     {
+        audioManager = AudioManager.Instance;
+        
         _cameraShaking = GameObject.Find("Main Camera").GetComponent<CameraShaking>();
         if (gameObject.name == "akrep")
         {
@@ -25,14 +28,15 @@ public class RotateClock : MonoBehaviour
 
     private void RotateAkrep()
     {
-        transform.Rotate(0,(donmeHizi * 0.3f) * Time.deltaTime,0);
+        transform.Rotate(0,(rotateSpeed * 0.3f) * Time.deltaTime,0);
     }
 
     private void RotateYelkovan()
     {
-        transform.Rotate(0,donmeHizi * Time.deltaTime,0);
+        transform.Rotate(0,rotateSpeed * Time.deltaTime,0);
     }
-    void Update()
+
+    private void Update()
     {
         if (_akrep)
         {
@@ -46,12 +50,15 @@ public class RotateClock : MonoBehaviour
 
     public void ReverseClocks()
     {
-        donmeHizi = donmeHizi * -3 / 2;
-        
+        rotateSpeed = rotateSpeed * -3 / 2;
+
     }
     private void OnCollisionEnter(Collision other)
     {
-        _player.PauseGame();
+        audioManager.Play("Punch");
+        player.PauseGame();
         _cameraShaking.CameraShake();
+        player.Invoke(nameof(player._GameOverPanel),0.75f);
+        
     }
 }
