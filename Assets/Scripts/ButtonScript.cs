@@ -15,8 +15,6 @@ public class ButtonScript : MonoBehaviour
         _ChangeToCustom();
     }
 
-   
-
     private int RandomMaterialIndex()
     {
         return Random.Range(0, planes[0].materials.Length);
@@ -48,8 +46,5 @@ public class ButtonScript : MonoBehaviour
         random = RandomCustomIndex();
         planes[random].ChangeToCustom();
         player.isJumpedToPlane = false;
-
     }
-
-
 }

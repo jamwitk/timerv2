@@ -52,9 +52,8 @@
           <e p="ButtonScript.cs" t="Include" />
           <e p="CameraShaking.cs" t="Include" />
           <e p="ChangeMaterial.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
           <e p="gameOverScore.cs" t="Include" />
-          <e p="MobileControl.cs" t="Include" />
-          <e p="Paused.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="RotateClock.cs" t="Include" />
           <e p="ScoreManager.cs" t="Include" />

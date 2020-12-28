@@ -20,7 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0e4b260-8703-4340-a497-1b2870093b60" name="Default Changelist" comment="Added AudioManager that controls audios in game">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameOverScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameOverScore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MobileControl.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MobileControl.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Paused.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Paused.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RotateClock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RotateClock.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,19 +42,22 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://D:/Unity/2019.4.14f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventTriggerType.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Unity/2019.4.14f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventTriggerType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://D:/Unity/2019.4.14f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/InputModules/StandaloneInputModule.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://D:/Unity/2019.4.14f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventHandle.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Unity/2019.4.14f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventHandle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://D:/Unity/2019.4.14f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MobileControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameOverScore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MobileControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Paused.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RotateClock.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
       </list>
     </option>
   </component>
@@ -54,6 +68,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -86,7 +101,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609104796736</updated>
-      <workItem from="1609104860673" duration="3607000" />
+      <workItem from="1609104860673" duration="4344000" />
+      <workItem from="1609183763103" duration="6279000" />
     </task>
     <task id="LOCAL-00001" summary="Added AudioManager that controls audios in game">
       <created>1609108126357</created>
@@ -110,6 +126,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -117,6 +134,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added AudioManager that controls audios in game" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="275" y="96" key="Rider.ProjectTemplateDialog.Size" timestamp="1609109937449">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="96" key="Rider.ProjectTemplateDialog.Size/0.0.1366.728/0.-900.1440.860@0.0.1366.728" timestamp="1609109937449" />
     <state x="275" y="84" key="Vcs.Push.Dialog.v2" timestamp="1609108145391">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -125,5 +146,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="485" y="99" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1366.728/0.-900.1440.860@0.0.1366.728" timestamp="1609108202908" />
+    <state x="34" y="29" width="1259" height="737" key="dock-window-1" timestamp="1609191318677">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="34" y="29" width="1259" height="737" key="dock-window-1/0.0.1366.728/0.-900.1440.860@0.-900.1440.860" timestamp="1609191318677" />
+    <state x="93" y="0" width="1053" height="815" key="dock-window-2" timestamp="1609190953590">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="93" y="0" width="1053" height="815" key="dock-window-2/0.0.1366.728/0.-900.1440.860@0.-900.1440.860" timestamp="1609190953590" />
   </component>
 </project>

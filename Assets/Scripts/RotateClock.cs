@@ -8,14 +8,20 @@ public class RotateClock : MonoBehaviour
     private bool _akrep;
     private bool _yelkovan;
     public int rotateSpeed;
+    [HideInInspector] public int speed;
     public Player player;
     private CameraShaking _cameraShaking;
     private AudioManager audioManager;
+    private GameManager gameManager;
     private void Start()
     {
         audioManager = AudioManager.Instance;
+        gameManager = GameManager.instance;
+        
+        speed = rotateSpeed;   
         
         _cameraShaking = GameObject.Find("Main Camera").GetComponent<CameraShaking>();
+        
         if (gameObject.name == "akrep")
         {
             _akrep = true;
@@ -56,9 +62,9 @@ public class RotateClock : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         audioManager.Play("Punch");
-        player.PauseGame();
         _cameraShaking.CameraShake();
-        player.Invoke(nameof(player._GameOverPanel),0.75f);
+        gameManager.PauseGame();
+        player.Invoke(nameof(gameManager.OpenGameOverPanel),0.75f);
         
     }
 }

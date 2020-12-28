@@ -10,10 +10,11 @@ public class GameOverScore : MonoBehaviour
     public ScoreManager scoreManager;
     private RotateClock _rotateClock;
     private RotateClock _rotateClock1;
-
+    private GameManager _gameManager;
 
     private void Start()
     {
+        _gameManager = GameManager.instance;
         _rotateClock1 = clocks[1].GetComponent<RotateClock>();
         _rotateClock = clocks[0].GetComponent<RotateClock>();
     }
@@ -31,7 +32,7 @@ public class GameOverScore : MonoBehaviour
             gameManager.RandomizePlanes(); // Setting random color to all plane
             gameManager.SettingDefaultMaterials(); //Gets new default material valıe
             
-            player.RestartCharacter(); // Start character move and jump
+            _gameManager.RestartGame(); // Start character move and jump
             gameManager._ChangeToCustom(); // Select one random red material
             scoreManager.ResetText(); // reset score
             gameObject.SetActive(false); // Close GAME over panel
