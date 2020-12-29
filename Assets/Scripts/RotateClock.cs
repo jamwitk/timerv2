@@ -64,7 +64,7 @@ public class RotateClock : MonoBehaviour
         audioManager.Play("Punch");
         _cameraShaking.CameraShake();
         gameManager.PauseGame();
-        player.Invoke(nameof(gameManager.OpenGameOverPanel),0.75f);
-        
+        StartCoroutine(gameManager.DelayGameOverPanel());
+
     }
 }

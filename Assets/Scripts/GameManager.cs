@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -10,7 +11,7 @@ public class GameManager : MonoBehaviour
     public CameraShaking cameraShaking;
     
     //Objects
-    public GameObject buttonPause;
+    public GameObject postProcessingGO;
     public ParticleSystem particle;
     public GameObject joystick;
 
@@ -21,7 +22,8 @@ public class GameManager : MonoBehaviour
     public RotateClock[] clocks; 
     //Inputs
     public bool isAndroid;
-
+    private bool isParticleStopped;
+    private bool isWorking;
     public bool isWindows;
 
     //Instance
@@ -34,10 +36,12 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(postProcessingGO);
         }
         else
         {
             Destroy(gameObject);
+            
         }
         
 
@@ -47,7 +51,6 @@ public class GameManager : MonoBehaviour
         
 #if UNITY_ANDROID
     isAndroid = true;
-    buttonPause.SetActive(true);
     joystick.SetActive(true);
     buttonSpace.SetActive(true);
 #elif UNITY_STANDALONE_WIN
@@ -72,7 +75,6 @@ public class GameManager : MonoBehaviour
         //Stops every objects who has action on scene
         if (isAndroid)
         {
-            buttonPause.SetActive(false);
             joystick.SetActive(false);
             buttonSpace.SetActive(false);
         }
@@ -83,13 +85,14 @@ public class GameManager : MonoBehaviour
         player.moveSpeed = 0;
         player.jumpForce = 0;
         player.isJumpedToPlane = true;
+        player.isGrounded = true;
+        player.isCrunched = false;
     }
     
     public void RestartGame()
     {
         if (isAndroid)
         {
-            buttonPause.SetActive(true);
             joystick.SetActive(true);
             buttonSpace.SetActive(true);
         }
@@ -109,9 +112,8 @@ public class GameManager : MonoBehaviour
     {
         if (isAndroid)
         {
-            buttonPause.SetActive(true);
+            buttonSpace.SetActive(true);
             joystick.SetActive(true);
-            buttonPause.SetActive(true);
         }
         
         clocks[0].rotateSpeed = clocks[0].speed;
@@ -130,7 +132,6 @@ public class GameManager : MonoBehaviour
         
         if (isAndroid)
         {
-            buttonPause.SetActive(false);
             joystick.SetActive(false);
             buttonSpace.SetActive(false);
         }
@@ -145,9 +146,29 @@ public class GameManager : MonoBehaviour
         
         goverPanel.SetActive(true);
     }
-    public void StopParticle()
+
+    public IEnumerator DelayGameOverPanel()
     {
+        if(isWorking) yield break;
+        isWorking = true;
+
+        yield return new WaitForSeconds(0.75f);
+
+        goverPanel.SetActive(true);
+
+        isWorking = false;
+    }
+    public IEnumerator StopParticle()
+    {
+        if(isParticleStopped) yield break;
+        
+        isParticleStopped = true;
+        
+        yield return new WaitForSeconds(0.4f);
+        
         particle.Stop();
+        
+        isParticleStopped = false;
     }
 
     public void PlayParticle()
@@ -155,9 +176,4 @@ public class GameManager : MonoBehaviour
         particle.Play();
     }
 
-    public void OpenGameOverPanel()
-    {
-        goverPanel.SetActive(true);
-    }
-    
 }

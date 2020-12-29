@@ -122,8 +122,8 @@ public class Player : MonoBehaviour
                         gameManager.PlayParticle();
                         
                         gameManager.particle.transform.position = transform.position;
-                        
-                        Invoke(nameof(gameManager.StopParticle),0.5f);
+
+                        StartCoroutine(gameManager.StopParticle());
 
                         audioManager.Play("JumpPlane");
                         
@@ -140,4 +140,6 @@ public class Player : MonoBehaviour
                 }
         }
     }
+
+    
 }
