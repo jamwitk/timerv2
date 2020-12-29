@@ -1,38 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0e4b260-8703-4340-a497-1b2870093b60" name="Default Changelist" comment="Added AudioManager that controls audios in game">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameOverScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameOverScore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MobileControl.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MobileControl.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Paused.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Paused.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RotateClock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RotateClock.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" beforeDir="false" />
     </list>
+    <list id="dc9a8943-b871-4aae-9908-f353bd72246f" name="Revert &quot;added game manager&quot;" comment="Revert &quot;added game manager&quot;&#10;&#10;This reverts commit e33c38f8" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,12 +19,22 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://D:/Unity/2019.4.14f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventTriggerType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://D:/Unity/2019.4.14f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/InputModules/StandaloneInputModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/hushd/Documents/GitHub/timer-main/Assets/Scripts/GameOverScore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Unity/2019.4.14f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventHandle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/hushd/Documents/GitHub/timer-main/Assets/Scripts/GameManager.cs.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/hushd/Documents/GitHub/timer-main/Assets/Scripts/GameOverScore.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Unity/2019.4.14f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/InputModules/StandaloneInputModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/hushd/Documents/GitHub/timer-main/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/hushd/Documents/GitHub/timer-main/Assets/Scripts/ButtonScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/hushd/Documents/GitHub/timer-main/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/hushd/Documents/GitHub/timer-main/Assets/Scripts/GameOverScore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Unity/2019.4.14f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="vcs://C:/Users/hushd/Documents/GitHub/timer-main/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MaterialManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -119,11 +108,41 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
           </value>
         </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
@@ -134,10 +153,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added AudioManager that controls audios in game" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="245" y="0" key="CommitChangelistDialog2" timestamp="1609261776493">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="245" y="0" key="CommitChangelistDialog2/0.0.1366.728/0.-900.1440.860@0.-900.1440.860" timestamp="1609261776493" />
+    <state x="92" y="-808" width="1256" height="676" key="DiffContextDialog" timestamp="1609262254603">
+      <screen x="0" y="-900" width="1440" height="860" />
+    </state>
+    <state x="92" y="-808" width="1256" height="676" key="DiffContextDialog/0.0.1366.728/0.-900.1440.860@0.-900.1440.860" timestamp="1609262254603" />
     <state x="275" y="96" key="Rider.ProjectTemplateDialog.Size" timestamp="1609109937449">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="96" key="Rider.ProjectTemplateDialog.Size/0.0.1366.728/0.-900.1440.860@0.0.1366.728" timestamp="1609109937449" />
+    <state x="567" y="-557" key="VCS.ChangelistChooser" timestamp="1609262031176">
+      <screen x="0" y="-900" width="1440" height="860" />
+    </state>
+    <state x="567" y="-557" key="VCS.ChangelistChooser/0.0.1366.728/0.-900.1440.860@0.-900.1440.860" timestamp="1609262031176" />
     <state x="275" y="84" key="Vcs.Push.Dialog.v2" timestamp="1609108145391">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -146,10 +177,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="485" y="99" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1366.728/0.-900.1440.860@0.0.1366.728" timestamp="1609108202908" />
-    <state x="34" y="29" width="1259" height="737" key="dock-window-1" timestamp="1609191318677">
+    <state x="537" y="-556" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609262109397">
+      <screen x="0" y="-900" width="1440" height="860" />
+    </state>
+    <state x="537" y="-556" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/0.-900.1440.860@0.-900.1440.860" timestamp="1609262109397" />
+    <state x="-4" y="17" width="1319" height="712" key="dock-window-1" timestamp="1609261545502">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="34" y="29" width="1259" height="737" key="dock-window-1/0.0.1366.728/0.-900.1440.860@0.-900.1440.860" timestamp="1609191318677" />
+    <state x="-4" y="17" width="1319" height="712" key="dock-window-1/0.0.1366.728/0.-900.1440.860@0.-900.1440.860" timestamp="1609261545502" />
     <state x="93" y="0" width="1053" height="815" key="dock-window-2" timestamp="1609190953590">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
