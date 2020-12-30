@@ -5,7 +5,7 @@ public class GameOverScore : MonoBehaviour
 {
     public Text gameOverScoreText;
     public GameObject[] clocks;
-    public ButtonScript gameManager;
+    public MaterialManager gameManager;
     public Player player;
     public ScoreManager scoreManager;
     private RotateClock _rotateClock;
@@ -33,7 +33,7 @@ public class GameOverScore : MonoBehaviour
             gameManager.SettingDefaultMaterials(); //Gets new default material valıe
             
             _gameManager.RestartGame(); // Start character move and jump
-            gameManager._ChangeToCustom(); // Select one random red material
+            gameManager.SetNewTarget(); // Select one random red material
             scoreManager.ResetText(); // reset score
             gameObject.SetActive(false); // Close GAME over panel
         }

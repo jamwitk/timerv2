@@ -14,11 +14,10 @@ public class GameManager : MonoBehaviour
     public GameObject postProcessingGO;
     public ParticleSystem particle;
     public GameObject joystick;
-
+    
     public GameObject buttonSpace;
     public GameObject pausePanel;
     public GameObject goverPanel;
-
     public RotateClock[] clocks; 
     //Inputs
     public bool isAndroid;
@@ -76,7 +75,7 @@ public class GameManager : MonoBehaviour
         if (isAndroid)
         {
             joystick.SetActive(false);
-            buttonSpace.SetActive(false);
+            buttonSpace.SetActive(false); 
         }
         
         clocks[0].rotateSpeed = 0;

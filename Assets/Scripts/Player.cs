@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
- 
     public ScoreManager scoreManager;
     public Joystick joystick;
     
@@ -21,7 +20,7 @@ public class Player : MonoBehaviour
     public float _moveSpeed;
     private Vector3 _movement = Vector3.zero;
    
-    public ButtonScript buttonScript;
+    public MaterialManager materialManager;
     
     [HideInInspector] public bool isJumpedToPlane = true;
     
@@ -112,12 +111,13 @@ public class Player : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         isGrounded = true;
+        
         switch (other.gameObject.tag)
         {
             case "12Planes":
                 {
                     isJumpedToPlane = true;
-                    if (other.gameObject.name=="12Plane"+buttonScript.random)
+                    if (other.gameObject.name=="12Plane"+materialManager.random)
                     {
                         gameManager.PlayParticle();
                         
@@ -127,13 +127,14 @@ public class Player : MonoBehaviour
 
                         audioManager.Play("JumpPlane");
                         
-                        buttonScript.planes[buttonScript.random].GetComponent<ChangeMaterial>().SetToDefault();
+                        materialManager.planes[materialManager.random].GetComponent<ChangeMaterial>().SetToDefault();
                         
-                        buttonScript._ChangeToCustom(); // Selecting next red random material
+                        materialManager.SetNewTarget(); // Selecting next red random material
                         
                         scoreManager.ScoreCombo++; //adding 100 score 
                         
                         scoreManager.ScoreCalculation(); // Calculating Scores
+
                         
                     }
                     break;
