@@ -22,7 +22,6 @@
       <Path>Library</Path>
       <Path>Temp</Path>
       <Path>obj</Path>
-      <Path>old</Path>
     </explicitExcludes>
   </component>
 </project>

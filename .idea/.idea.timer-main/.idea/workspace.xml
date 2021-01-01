@@ -9,12 +9,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/kirmizi.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/kirmizi.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PostProcess/PlanePP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PostProcess/PlanePP.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MaterialManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MaterialManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameOverScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameOverScore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <list id="dc9a8943-b871-4aae-9908-f353bd72246f" name="Revert &quot;added game manager&quot;" comment="Revert &quot;added game manager&quot;&#10;&#10;This reverts commit e33c38f8" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +34,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MobileControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Paused.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RotateClock.cs" />
@@ -47,6 +45,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MaterialManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" />
       </list>
     </option>
   </component>
@@ -95,6 +95,9 @@
       <workItem from="1609331038712" duration="8440000" />
       <workItem from="1609355148721" duration="1074000" />
       <workItem from="1609361412228" duration="903000" />
+      <workItem from="1609517926567" duration="2566000" />
+      <workItem from="1609524047423" duration="428000" />
+      <workItem from="1609524512124" duration="1396000" />
     </task>
     <task id="LOCAL-00001" summary="Added AudioManager that controls audios in game">
       <created>1609108126357</created>
