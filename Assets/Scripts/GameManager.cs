@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,33 +15,31 @@ public class GameManager : MonoBehaviour
     public GameObject postProcessingGO;
     public ParticleSystem particle;
     public GameObject joystick;
-    
     public GameObject buttonSpace;
     public GameObject pausePanel;
     public GameObject goverPanel;
     public RotateClock[] clocks; 
     //Inputs
-    public bool isAndroid;
-    private bool isParticleStopped;
-    private bool isWorking;
-    public bool isWindows;
-
-    //Instance
+    [HideInInspector] public bool isAndroid , isWindows;
+     private bool isParticleStopped, isWorking;
+     
+     //Instance
     public static GameManager instance;
 
     private void Awake()
     {
+        
+        
         #region singleton
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            
             DontDestroyOnLoad(postProcessingGO);
         }
         else
         {
             Destroy(gameObject);
-            
         }
         
 
@@ -52,6 +51,7 @@ public class GameManager : MonoBehaviour
     isAndroid = true;
     joystick.SetActive(true);
     buttonSpace.SetActive(true);
+    Application.targetFrameRate = 60; // set max fps 60 on mobile
 #elif UNITY_STANDALONE_WIN
         isWindows = true;
 #endif
@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour
         player.jumpForce = 20;
         player.isGrounded = true;
         player.transform.position = new Vector3(0,1,-8);
-        
+
         goverPanel.SetActive(false);
     }
 
@@ -143,9 +143,11 @@ public class GameManager : MonoBehaviour
         player.isJumpedToPlane = true;
         player.transform.position = new Vector3(0,1,-8);
         
+        
+        
         goverPanel.SetActive(true);
     }
-
+    
     public IEnumerator DelayGameOverPanel()
     {
         if(isWorking) yield break;

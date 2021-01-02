@@ -515,7 +515,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1212605528}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -892,7 +892,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1024270704}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -1064,7 +1064,7 @@ PrefabInstance:
     - target: {fileID: 9221800247981101769, guid: c4fa6a99e4734e44a8f2ad2f76f453c9,
         type: 3}
       propertyPath: weight
-      value: 0.66
+      value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: 9221800247981101775, guid: c4fa6a99e4734e44a8f2ad2f76f453c9,
         type: 3}
@@ -1284,9 +1284,9 @@ Canvas:
   m_GameObject: {fileID: 1287968422}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_RenderMode: 1
+  m_Camera: {fileID: 360148118}
+  m_PlaneDistance: 0.5
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0

@@ -117,7 +117,7 @@ public class Player : MonoBehaviour
             case "12Planes":
                 {
                     isJumpedToPlane = true;
-                    if (other.gameObject.name=="12Plane"+materialManager.random)
+                    if (other.gameObject.name == "12Plane"+materialManager.random)
                     {
                         gameManager.PlayParticle();
                         

@@ -13,16 +13,17 @@ public class MaterialManager : MonoBehaviour
 
     private void Awake()
     {
-        foreach (var plane in GameObject.FindGameObjectsWithTag("12Planes"))
-        {
-            planes.Add(plane.GetComponent<ChangeMaterial>());
-        }
+        // foreach (var plane in GameObject.FindGameObjectsWithTag("12Planes"))
+        // {
+        //     planes.Add(plane.GetComponent<ChangeMaterial>());
+        // }
+        
     }
 
     private void Start()
-    {
+    { 
         SettingDefaultMaterials();
-       SetNewTarget();
+        SetNewTarget();
     }
 
     private int RandomMaterialIndex()
@@ -38,7 +39,7 @@ public class MaterialManager : MonoBehaviour
             planes[i].RandomMaterial(random);
         }
     }
-
+    
     private static int RandomCustomIndex()
     {
         return Random.Range(0,12);

@@ -54,6 +54,7 @@
           <e p="GameManager.cs" t="Include" />
           <e p="gameOverScore.cs" t="Include" />
           <e p="MaterialManager.cs" t="Include" />
+          <e p="Menu.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="RotateClock.cs" t="Include" />
           <e p="SceneManager.cs" t="Include" />

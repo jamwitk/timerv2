@@ -31,7 +31,7 @@ public class ChangeMaterial : MonoBehaviour
         //Setting custom material to plane
         _mesh.material = customMaterial;
     }
-
+    
     public void SetToDefault()
     {
         //Setting back default material 
