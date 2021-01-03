@@ -34,8 +34,6 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            
-            DontDestroyOnLoad(postProcessingGO);
         }
         else
         {
@@ -123,6 +121,7 @@ public class GameManager : MonoBehaviour
         player.isGrounded = true;
         
         pausePanel.SetActive(false);
+        Debug.Log(player.isGrounded +" "+ player.jumpForce);
     }
 
     public void Die()

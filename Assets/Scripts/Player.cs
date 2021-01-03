@@ -38,10 +38,11 @@ public class Player : MonoBehaviour
         
         _moveSpeed = moveSpeed;
         
+        
         _rigidbody = GetComponent<Rigidbody>();
         Physics.gravity *= GravityModifier;
     }
-
+    
     private void Update()
     {
         

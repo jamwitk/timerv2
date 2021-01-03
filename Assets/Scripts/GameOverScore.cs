@@ -6,7 +6,6 @@ public class GameOverScore : MonoBehaviour
     public Text gameOverScoreText;
     public GameObject[] clocks;
     public MaterialManager gameManager;
-    public Player player;
     public ScoreManager scoreManager;
     private RotateClock _rotateClock;
     private RotateClock _rotateClock1;
@@ -19,7 +18,7 @@ public class GameOverScore : MonoBehaviour
         _rotateClock = clocks[0].GetComponent<RotateClock>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.Space) || Input.touchCount > 0)
         { 
@@ -41,6 +40,7 @@ public class GameOverScore : MonoBehaviour
 
     public void SetGameOverScore()
     {
+        //Used with Animator Component 
         gameOverScoreText.text = FindObjectOfType<ScoreManager>().Score.ToString(); // ScoreManager objesini bulup oradaki Score değişkenine ulaşır
     }
 }
