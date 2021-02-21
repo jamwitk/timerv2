@@ -1,4 +1,5 @@
 ﻿using System;
+using Audio;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -8,6 +9,18 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance;
     private void Awake()
     {
+        for(var index = 0; index < sounds.Length; index++)
+        {
+            var s = sounds[index];
+            s.source = gameObject.AddComponent<AudioSource>();
+            s.source.clip = s.clip;
+
+            s.source.volume = s.volume;
+            s.source.pitch = s.pitch;
+            s.source.loop = s.loop;
+            s.source.playOnAwake = s.PlayOnAwake;
+        }
+        
         if (Instance == null)
         {
             Instance = this;
@@ -17,19 +30,7 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
-        foreach (var s in sounds)
-        {
-            s.source = gameObject.AddComponent<AudioSource>();
-            s.source.clip = s.clip;
-
-            s.source.volume = s.volume;
-            s.source.pitch = s.pitch;
-            s.source.loop = s.loop;
-            s.source.playOnAwake = s.PlayOnAwake;
-        }
     }
-
     private void Start()
     { 
         Play("Track");
@@ -37,7 +38,6 @@ public class AudioManager : MonoBehaviour
 
     public void Play(string nameM)
     {
-        
         var s = Array.Find(sounds, sound => sound.name == nameM);
         s.source.Play();
     }

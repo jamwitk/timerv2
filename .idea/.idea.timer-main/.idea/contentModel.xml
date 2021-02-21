@@ -48,19 +48,33 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="AudioManager.cs" t="Include" />
-          <e p="CameraShaking.cs" t="Include" />
-          <e p="ChangeMaterial.cs" t="Include" />
-          <e p="GameManager.cs" t="Include" />
-          <e p="gameOverScore.cs" t="Include" />
-          <e p="MaterialManager.cs" t="Include" />
-          <e p="Menu.cs" t="Include" />
-          <e p="PausePanel.cs" t="Include" />
-          <e p="Player.cs" t="Include" />
-          <e p="RotateClock.cs" t="Include" />
-          <e p="SceneManagements.cs" t="Include" />
-          <e p="ScoreManager.cs" t="Include" />
-          <e p="Sounds.cs" t="Include" />
+          <e p="Audio" t="Include">
+            <e p="AudioManager.cs" t="Include" />
+            <e p="Sounds.cs" t="Include" />
+          </e>
+          <e p="Clock" t="Include">
+            <e p="ClockCollusion.cs" t="Include" />
+            <e p="RotateClock.cs" t="Include" />
+          </e>
+          <e p="Game" t="Include">
+            <e p="CameraShaking.cs" t="Include" />
+            <e p="ChangeMaterial.cs" t="Include" />
+            <e p="GameManager.cs" t="Include" />
+            <e p="MaterialManager.cs" t="Include" />
+            <e p="SceneManagements.cs" t="Include" />
+          </e>
+          <e p="Player" t="Include">
+            <e p="Player.cs" t="Include" />
+            <e p="PlayerTrigger.cs" t="Include" />
+          </e>
+          <e p="Score" t="Include">
+            <e p="gameOverScore.cs" t="Include" />
+            <e p="ScoreManager.cs" t="Include" />
+          </e>
+          <e p="UI" t="Include">
+            <e p="Menu.cs" t="Include" />
+            <e p="PausePanel.cs" t="Include" />
+          </e>
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Examples &amp; Extras" t="Include">
