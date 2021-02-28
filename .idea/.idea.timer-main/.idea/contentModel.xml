@@ -63,6 +63,9 @@
             <e p="MaterialManager.cs" t="Include" />
             <e p="SceneManagements.cs" t="Include" />
           </e>
+          <e p="LoadScene" t="Include">
+            <e p="LevelLoader.cs" t="Include" />
+          </e>
           <e p="Player" t="Include">
             <e p="Player.cs" t="Include" />
             <e p="PlayerTrigger.cs" t="Include" />

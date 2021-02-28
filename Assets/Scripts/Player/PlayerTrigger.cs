@@ -1,49 +1,51 @@
-﻿using System;
-using Game;
+﻿using Game;
 using Score;
 using UnityEngine;
 
-public class PlayerTrigger : MonoBehaviour
+namespace Player
 {
+    public class PlayerTrigger : MonoBehaviour
+    {
     
-    private Player.Player _player;
-    [SerializeField]private MaterialManager materialManager;
-    [SerializeField]private ScoreManager scoreManager;
-    private void Start()
-    {
-        _player = GetComponent<Player.Player>();
-        
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        _player.isGrounded = true;
-        switch (other.gameObject.tag)
+        private Player _player;
+        private MaterialManager _materialManager;
+        private ScoreManager _scoreManager;
+        private void Start()
         {
-            case "12Planes":
+            _scoreManager = FindObjectOfType<ScoreManager>();
+            _materialManager = FindObjectOfType<MaterialManager>();
+            _player = GetComponent<Player>();
+        }
+
+        private void OnCollisionEnter(Collision other)
+        {
+            _player.isGrounded = true;
+            switch (other.gameObject.tag)
             {
-                _player.isJumpedToPlane = true;
-
-                if (other.gameObject.name == "12Plane"+materialManager.random)
+                case "12Planes":
                 {
-                    GameManager.instance.PlayParticle();
+                    _player.isJumpedToPlane = true;
 
-                    GameManager.instance.particle.transform.position = transform.position;
+                    if (other.gameObject.name == "12Plane"+_materialManager.random)
+                    {
+                        GameManager.instance.PlayParticle();
 
-                    StartCoroutine(GameManager.instance.StopParticle());
-                    
-                    AudioManager.Instance.Play("JumpPlane");
-                    
-                    materialManager.planes[materialManager.random].GetComponent<ChangeMaterial>().SetToDefault();
-                    
-                    materialManager.SetNewTarget();
+                        GameManager.instance.particle.transform.position = transform.position;
 
-                    scoreManager.ScoreCombo++;
+                        StartCoroutine(GameManager.instance.StopParticle());
                     
-                    scoreManager.ScoreCalculation();
-
+                        AudioManager.Instance.Play("JumpPlane");
+                        
+                        _materialManager.planes[_materialManager.random].GetComponent<ChangeMaterial>().SetToDefault();
+                        
+                        _materialManager.SetNewTarget();
+                        
+                        _scoreManager.ScoreCombo++;
+                        
+                        _scoreManager.ScoreCalculation();
+                    }
+                    break;
                 }
-                break;
             }
         }
     }

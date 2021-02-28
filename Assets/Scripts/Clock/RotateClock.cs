@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-
 namespace Clock
 {
     public class RotateClock : MonoBehaviour
@@ -9,6 +8,7 @@ namespace Clock
         [HideInInspector] public int speed;
         private void Start()
         {
+            
             speed = rotateSpeed;
         }
 

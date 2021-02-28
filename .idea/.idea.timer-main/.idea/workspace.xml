@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand />
     <select />
@@ -7,88 +10,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c0e4b260-8703-4340-a497-1b2870093b60" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/DefaultNumberMaterial.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/DefaultNumberMaterial.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Models/timer.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Models/timer.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/PlaneMaterial.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/PlaneMaterial.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/RED.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/RED.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/akrep_material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/akrep_material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/kirmizi.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/kirmizi.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/mat1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/mat1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/mat2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/mat2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/mat3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/mat3.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/mat4.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/mat4.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/mat5.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/mat5.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/natu (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/natu (1).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/siyah.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/siyah.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PostProcess/PlanePP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PostProcess/PlanePP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AudioManager.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AudioManager.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Clocks.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Clocks.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cube.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cube.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GameManager.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GameManager.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Plane.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Plane.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PostProcessingGO.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PostProcessingGO.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SceneManager.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SceneManager.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/_Planes.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/_Planes.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PostProcess/Scene 0 PP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PostProcess/Scene 0 PP.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene 0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene 0.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene 0/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene 0/LightingData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene 0/Lightmap-0_comp_dir.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene 0/Lightmap-0_comp_dir.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene 0/Lightmap-0_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene 0/Lightmap-0_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene 0/Lightmap-0_comp_light.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene 0/Lightmap-0_comp_light.exr.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraShaking.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraShaking.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChangeMaterial.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChangeMaterial.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameOverScore.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameOverScore.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MaterialManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MaterialManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PausePanel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PausePanel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RotateClock.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RotateClock.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneManagements.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneManagements.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sounds.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sounds.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Clock/ClockCollusion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Clock/ClockCollusion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Clock/RotateClock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Clock/RotateClock.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerTrigger.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +30,7 @@
     <setting file="file://D:/Unity/2019.4.14f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventTriggerType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Clock/ClockCollusion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://D:/Unity/2019.4.14f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/InputModules/StandaloneInputModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/68AF5084-3D0A-4539-8C92-799647332EC2/33/b6c1b7e1/AssetsItem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Unity/2019.4.14f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventHandle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://D:/Unity/2019.4.14f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9674024A-B0E7-4D27-BBE9-EAA30DAB34D1/d7/37d5ca41/Transform.cs" root0="SKIP_HIGHLIGHTING" />
@@ -133,15 +61,18 @@
         <option value="$PROJECT_DIR$/Assets/PlayerTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/RotateClock.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Clock/RotateClock.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Audio/Sounds.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Score/GameOverScore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/MaterialManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Score/ScoreManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Clock/ClockCollusion.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/SceneManagements.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Clock/ClockCollusion.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LoadScene/LoadScene.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Clock/RotateClock.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LoadScene/LevelLoader.cs" />
       </list>
     </option>
   </component>
@@ -210,6 +141,7 @@
       <workItem from="1613595629700" duration="1291000" />
       <workItem from="1613812866217" duration="569000" />
       <workItem from="1613909432101" duration="8741000" />
+      <workItem from="1614539944951" duration="3464000" />
     </task>
     <task id="LOCAL-00001" summary="Added AudioManager that controls audios in game">
       <created>1609108126357</created>
@@ -354,10 +286,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="93" y="0" width="1053" height="815" key="dock-window-2/0.0.1366.728/0.-900.1440.860@0.-900.1440.860" timestamp="1609190953590" />
-    <state x="363" y="152" key="search.everywhere.popup" timestamp="1613910559313">
+    <state x="363" y="152" width="672" height="678" key="search.everywhere.popup" timestamp="1614544245302">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="383" y="-720" key="search.everywhere.popup/0.0.1366.728/0.-900.1440.860@0.-900.1440.860" timestamp="1613241552314" />
-    <state x="363" y="152" key="search.everywhere.popup/0.0.1366.728/0.-900.1440.860@0.0.1366.728" timestamp="1613910559313" />
+    <state x="363" y="152" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/0.-900.1440.860@0.0.1366.728" timestamp="1614544245302" />
   </component>
 </project>
