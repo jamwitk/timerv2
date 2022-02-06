@@ -7,7 +7,7 @@ public class ChangeMaterial : MonoBehaviour
     private Material _defaultMaterial;
     //Main mesh
     private MeshRenderer _mesh;
-
+    private int countNumber;
     private void Start()
     {
          
@@ -19,17 +19,19 @@ public class ChangeMaterial : MonoBehaviour
 
     public void GetDefaultMaterial()
     {
+        if(_mesh.material == customMaterial) return;
         _defaultMaterial = _mesh.material;
     }
     public void RandomMaterial(int random)
     {
-        
         _mesh.material = materials[random];
     }
     public void ChangeToCustom()
     {
         //Setting custom material to plane
         _mesh.material = customMaterial;
+        print(_mesh.name + "  and  " + customMaterial.name);
+
     }
     
     public void SetToDefault()

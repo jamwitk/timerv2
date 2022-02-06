@@ -1,6 +1,10 @@
 ﻿using System.Collections;
+using Audio;
 using UnityEngine;
-using Clock;
+using Clocks;
+using Score;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Game
 {
@@ -9,24 +13,26 @@ namespace Game
         //Scripts
         public Player.Player player;
         public CameraShaking cameraShaking;
-    
+        public ClockController clockController;
+        public Menu menu;
+
+        public MaterialManager materialManager;
+
+        public ScoreManager scoreManager;
         //Objects
         public ParticleSystem particle;
-        public GameObject joystick;
-        public GameObject buttonSpace;
-        public GameObject pausePanel;
-        public GameObject goverPanel;
-        public RotateClock[] clocks; 
         //Inputs
         [HideInInspector] public bool isAndroid , isWindows;
         private bool isParticleStopped, isWorking;
-     
+
+        public bool isGame;
         //Instance
         public static GameManager instance;
+        private const float GravityModifier = 10;
 
         private void Awake()
         {
-            #region singleton
+            #region Singleton
             if (instance == null)
             {
                 instance = this;
@@ -39,112 +45,34 @@ namespace Game
 
             #endregion
 
-            #region PlatformDetection
+            #region ApplicationSettings
+
+            Physics.gravity *= GravityModifier;
             Application.targetFrameRate = 60;
-#if UNITY_ANDROID
-            isAndroid = true;
-            joystick.SetActive(true);
-            buttonSpace.SetActive(true);
-#endif
-
-             #endregion
             
-        }
 
-        private void Update()
-        {
-            if (!Input.GetButtonDown("Cancel")) return;
-            PauseGame();
-            pausePanel.SetActive(true);
+            #endregion
         }
-
-        public void PauseGame()
-        {
-            //Stops every objects who has action on scene
-            if (isAndroid)
-            {
-                joystick.SetActive(false);
-                buttonSpace.SetActive(false); 
-            }
-        
-            clocks[0].rotateSpeed = 0;
-            clocks[1].rotateSpeed = 0;
-
-            player.moveSpeed = 0;
-            player.jumpForce = 0;
-            player.isJumpedToPlane = true;
-            player.isGrounded = true;
-            player.isCrunched = false;
-        }
-    
         public void RestartGame()
         {
-            if (isAndroid)
-            {
-                joystick.SetActive(true);
-                buttonSpace.SetActive(true);
-            }
-
-            clocks[0].rotateSpeed = clocks[0].speed;
-            clocks[1].rotateSpeed = clocks[1].speed;
-
-            player.moveSpeed = player.privateMoveSpeed;
-            player.jumpForce = 20;
-            player.isGrounded = true;
-            player.transform.position = new Vector3(0,1,-8);
-
-            goverPanel.SetActive(false);
+            isGame = true;
+            if (clockController == null) return;
+            clockController.SetClocksSpeedDefault();
+            clockController.SetClocksRotationDefault();
+            if (player != null) player.Reset();
+            if (materialManager != null) materialManager.Reset();
+            if (scoreManager != null) scoreManager.ResetText();
         }
-
-        public void ShowAd()
+        public void FinishGame()
         {
-            //Rewarded ads 
-        }
-        public void ContinueGame()
-        {
-            if (isAndroid)
-            {
-                buttonSpace.SetActive(true);
-                joystick.SetActive(true);
-            }
-        
-            clocks[0].rotateSpeed = clocks[0].speed;
-            clocks[1].rotateSpeed = clocks[1].speed;
-
-            player.moveSpeed = player.privateMoveSpeed;
-            player.jumpForce = 20;
-            player.isGrounded = true;
-        
-            pausePanel.SetActive(false);
-        }
-
-        public void Die()
-        {
+            if (!isGame) return;
+            isGame = false;
             cameraShaking.CameraShake();
-        
-            if (isAndroid)
-            {
-                joystick.SetActive(false);
-                buttonSpace.SetActive(false);
-            }
-        
-            clocks[0].rotateSpeed = 0;
-            clocks[1].rotateSpeed = 0;
-
-            player.moveSpeed = 0;
-            player.jumpForce = 0;
+            AudioManager.Instance.Play("Punch");
+            menu.gamePanel.SetActive(false);
+            player.Reset();
+            StartCoroutine(GameManager.instance.DelayGameOverPanel());
             
-            
-            
-            
-
-            //Resetting
-            player.isJumpedToPlane = true;
-            player.transform.position = new Vector3(0,1,-8);
-        
-        
-        
-            goverPanel.SetActive(true);
         }
     
         public IEnumerator DelayGameOverPanel()
@@ -152,10 +80,9 @@ namespace Game
             if(isWorking) yield break;
             isWorking = true;
 
-            yield return new WaitForSeconds(0.75f);
+            yield return new WaitForSecondsRealtime(0.75f);
 
-            goverPanel.SetActive(true);
-
+            menu.gameOverPanel.SetActive(true);
             isWorking = false;
         }
         public IEnumerator StopParticle()
@@ -170,10 +97,19 @@ namespace Game
         
             isParticleStopped = false;
         }
-
         public void PlayParticle()
         {
             particle.Play();
+        }
+
+        public void SetScoreToTextRuntime(int score)
+        {
+            menu.gameScoreText.text = score.ToString();
+        }
+        public void SetScoreToText(int score,int totalScore)
+        {
+            menu.gameOverScoreText.text = $" YOUR SCORE :     {score}";
+            menu.gameOverTotalScoreText.text = $" TOTAL SCORE  :     {totalScore}";
         }
 
     }

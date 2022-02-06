@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -62,6 +63,10 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
         OnDrag(eventData);
     }
 
+    private void OnDisable()
+    {
+        OnPointerUp(null);
+    }
     public void OnDrag(PointerEventData eventData)
     {
         cam = null;
