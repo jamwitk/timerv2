@@ -9,57 +9,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0e4b260-8703-4340-a497-1b2870093b60" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.timer-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.timer-main/riderModule.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animation/GameOverAnimation.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/GameOverAnimation.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/GameOverPanel.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/GameOverPanel.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Base/Joystick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Base/Joystick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Materials/PColors/mat1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Materials/PColors/mat1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Materials/PColors/mat2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Materials/PColors/mat2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Materials/PColors/mat3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Materials/PColors/mat3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Materials/PColors/mat4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Materials/PColors/mat4.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Materials/PColors/mat5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Materials/PColors/mat5.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Materials/PMaterials/DefaultNumberMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Materials/PMaterials/DefaultNumberMaterial.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Materials/PMaterials/PlaneMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Materials/PMaterials/PlaneMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PostProcess/Scene 0 PP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PostProcess/Scene 0 PP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Loading.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Loading.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene 0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene 0.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Clock.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Clock/ClockCollusion.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Clock/ClockCollusion.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Clock/RotateClock.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Clock/RotateClock.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/ChangeMaterial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ChangeMaterial.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/MaterialManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/MaterialManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/SceneManagements.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/SceneManagements.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadScene.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadScene/LevelLoader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadScene/LevelLoader.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerTrigger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerTrigger.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Score.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Score/GameOverScore.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Score/GameOverScore.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Score/ScoreManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Score/ScoreManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PausePanel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PausePanel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Scene/Clocks/ClockCollusion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Scene/Clocks/ClockCollusion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Scene/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Scene/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Scene/Player/PlayerTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Scene/Player/PlayerTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Scene/Score/GameOverScore.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Scene/Score/GameOverScore.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +50,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../Slime HeroesV2 Unity/Assets/Resources/Scripts/Controllers/WindowController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Slime HeroesV2 Unity/Assets/Resources/Scripts/AI/AIMovement.cs" root0="SKIP_HIGHLIGHTING" />
@@ -212,7 +180,13 @@
       <workItem from="1643383439137" duration="2168000" />
       <workItem from="1643476897543" duration="1982000" />
       <workItem from="1644049715795" duration="17014000" />
-      <workItem from="1644136256611" duration="4957000" />
+      <workItem from="1644136256611" duration="5093000" />
+      <workItem from="1644165372563" duration="723000" />
+      <workItem from="1644691319199" duration="602000" />
+      <workItem from="1644775266574" duration="2618000" />
+      <workItem from="1644858810572" duration="1225000" />
+      <workItem from="1644954868464" duration="3676000" />
+      <workItem from="1645032090829" duration="5035000" />
     </task>
     <task id="LOCAL-00001" summary="Added AudioManager that controls audios in game">
       <created>1609108126357</created>
@@ -256,7 +230,21 @@
       <option name="project" value="LOCAL" />
       <updated>1614544645224</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fixed bugs">
+      <created>1644164711509</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1644164711509</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fiexd bugs">
+      <created>1644164757615</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1644164757615</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,6 +312,8 @@
     <MESSAGE value="fixed bugs, added icons" />
     <MESSAGE value="final release for submit project to itch.io / optimization is dead" />
     <MESSAGE value="Added load screen that loads screen before entering." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added load screen that loads screen before entering." />
+    <MESSAGE value="fixed bugs" />
+    <MESSAGE value="fiexd bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="fiexd bugs" />
   </component>
 </project>

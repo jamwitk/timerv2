@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7017943745980528506}
   - component: {fileID: 7017943745980528505}
   - component: {fileID: 7017943745980528504}
-  - component: {fileID: 7017943745980528487}
   - component: {fileID: 7017943745980528507}
   m_Layer: 0
   m_Name: 12Plane (8)
@@ -57,6 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -81,20 +81,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7017943745980528487
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7017943745980528486}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &7017943745980528507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,6 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38686bf22ad67c41937bab795f9df35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materials: []
   customMaterial: {fileID: 2100000, guid: c8b078e5907ac2b409ce164677c03680, type: 2}
 --- !u!1 &7017943746475581937
 GameObject:
@@ -161,7 +149,6 @@ GameObject:
   - component: {fileID: 7017943746817999467}
   - component: {fileID: 7017943746817999466}
   - component: {fileID: 7017943746817999465}
-  - component: {fileID: 7017943746817999464}
   - component: {fileID: 7017943746817999468}
   m_Layer: 0
   m_Name: 12Plane (2)
@@ -207,6 +194,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -231,20 +219,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7017943746817999464
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7017943746817999447}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &7017943746817999468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38686bf22ad67c41937bab795f9df35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materials: []
   customMaterial: {fileID: 2100000, guid: c8b078e5907ac2b409ce164677c03680, type: 2}
 --- !u!1 &7017943747163882608
 GameObject:
@@ -269,7 +245,6 @@ GameObject:
   - component: {fileID: 7017943747163882612}
   - component: {fileID: 7017943747163882611}
   - component: {fileID: 7017943747163882610}
-  - component: {fileID: 7017943747163882609}
   - component: {fileID: 7017943747163882613}
   m_Layer: 0
   m_Name: 12Plane (5)
@@ -315,6 +290,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -339,20 +315,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7017943747163882609
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7017943747163882608}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &7017943747163882613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,6 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38686bf22ad67c41937bab795f9df35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materials: []
   customMaterial: {fileID: 2100000, guid: c8b078e5907ac2b409ce164677c03680, type: 2}
 --- !u!1 &7017943747276753042
 GameObject:
@@ -377,7 +341,6 @@ GameObject:
   - component: {fileID: 7017943747276753046}
   - component: {fileID: 7017943747276753045}
   - component: {fileID: 7017943747276753044}
-  - component: {fileID: 7017943747276753043}
   - component: {fileID: 7017943747276753047}
   m_Layer: 0
   m_Name: 12Plane
@@ -423,6 +386,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -447,20 +411,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7017943747276753043
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7017943747276753042}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &7017943747276753047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,6 +424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38686bf22ad67c41937bab795f9df35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materials: []
   customMaterial: {fileID: 2100000, guid: c8b078e5907ac2b409ce164677c03680, type: 2}
 --- !u!1 &7017943747514674770
 GameObject:
@@ -485,7 +437,6 @@ GameObject:
   - component: {fileID: 7017943747514674774}
   - component: {fileID: 7017943747514674773}
   - component: {fileID: 7017943747514674772}
-  - component: {fileID: 7017943747514674771}
   - component: {fileID: 7017943747514674775}
   m_Layer: 0
   m_Name: 12Plane (1)
@@ -531,6 +482,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -555,20 +507,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7017943747514674771
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7017943747514674770}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &7017943747514674775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,6 +520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38686bf22ad67c41937bab795f9df35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materials: []
   customMaterial: {fileID: 2100000, guid: c8b078e5907ac2b409ce164677c03680, type: 2}
 --- !u!1 &7017943747556535674
 GameObject:
@@ -593,7 +533,6 @@ GameObject:
   - component: {fileID: 7017943747556535678}
   - component: {fileID: 7017943747556535677}
   - component: {fileID: 7017943747556535676}
-  - component: {fileID: 7017943747556535675}
   - component: {fileID: 7017943747556535679}
   m_Layer: 0
   m_Name: 12Plane (9)
@@ -639,6 +578,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -663,20 +603,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7017943747556535675
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7017943747556535674}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &7017943747556535679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,6 +616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38686bf22ad67c41937bab795f9df35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materials: []
   customMaterial: {fileID: 2100000, guid: c8b078e5907ac2b409ce164677c03680, type: 2}
 --- !u!1 &7017943747621658649
 GameObject:
@@ -701,7 +629,6 @@ GameObject:
   - component: {fileID: 7017943747621658653}
   - component: {fileID: 7017943747621658652}
   - component: {fileID: 7017943747621658651}
-  - component: {fileID: 7017943747621658650}
   - component: {fileID: 7017943747621658654}
   m_Layer: 0
   m_Name: 12Plane (11)
@@ -747,6 +674,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -771,20 +699,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7017943747621658650
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7017943747621658649}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &7017943747621658654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -797,6 +712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38686bf22ad67c41937bab795f9df35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materials: []
   customMaterial: {fileID: 2100000, guid: c8b078e5907ac2b409ce164677c03680, type: 2}
 --- !u!1 &7017943747641110198
 GameObject:
@@ -809,7 +725,6 @@ GameObject:
   - component: {fileID: 7017943747641110346}
   - component: {fileID: 7017943747641110345}
   - component: {fileID: 7017943747641110344}
-  - component: {fileID: 7017943747641110199}
   - component: {fileID: 7017943747641110347}
   m_Layer: 0
   m_Name: 12Plane (6)
@@ -855,6 +770,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -879,20 +795,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7017943747641110199
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7017943747641110198}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &7017943747641110347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -905,6 +808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38686bf22ad67c41937bab795f9df35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materials: []
   customMaterial: {fileID: 2100000, guid: c8b078e5907ac2b409ce164677c03680, type: 2}
 --- !u!1 &7017943747641793810
 GameObject:
@@ -917,7 +821,6 @@ GameObject:
   - component: {fileID: 7017943747641793814}
   - component: {fileID: 7017943747641793813}
   - component: {fileID: 7017943747641793812}
-  - component: {fileID: 7017943747641793811}
   - component: {fileID: 7017943747641793815}
   m_Layer: 0
   m_Name: 12Plane (3)
@@ -963,6 +866,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -987,20 +891,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7017943747641793811
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7017943747641793810}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &7017943747641793815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1013,6 +904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38686bf22ad67c41937bab795f9df35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materials: []
   customMaterial: {fileID: 2100000, guid: c8b078e5907ac2b409ce164677c03680, type: 2}
 --- !u!1 &7017943747735384185
 GameObject:
@@ -1025,7 +917,6 @@ GameObject:
   - component: {fileID: 7017943747735384189}
   - component: {fileID: 7017943747735384188}
   - component: {fileID: 7017943747735384187}
-  - component: {fileID: 7017943747735384186}
   - component: {fileID: 7017943747735384190}
   m_Layer: 0
   m_Name: 12Plane (7)
@@ -1071,6 +962,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1095,20 +987,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7017943747735384186
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7017943747735384185}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &7017943747735384190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1121,6 +1000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38686bf22ad67c41937bab795f9df35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materials: []
   customMaterial: {fileID: 2100000, guid: c8b078e5907ac2b409ce164677c03680, type: 2}
 --- !u!1 &7017943747763664470
 GameObject:
@@ -1133,7 +1013,6 @@ GameObject:
   - component: {fileID: 7017943747763664490}
   - component: {fileID: 7017943747763664489}
   - component: {fileID: 7017943747763664488}
-  - component: {fileID: 7017943747763664471}
   - component: {fileID: 7017943747763664491}
   m_Layer: 0
   m_Name: 12Plane (10)
@@ -1179,6 +1058,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1203,20 +1083,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7017943747763664471
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7017943747763664470}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &7017943747763664491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1229,6 +1096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38686bf22ad67c41937bab795f9df35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materials: []
   customMaterial: {fileID: 2100000, guid: c8b078e5907ac2b409ce164677c03680, type: 2}
 --- !u!1 &7017943747864084594
 GameObject:
@@ -1241,7 +1109,6 @@ GameObject:
   - component: {fileID: 7017943747864084598}
   - component: {fileID: 7017943747864084597}
   - component: {fileID: 7017943747864084596}
-  - component: {fileID: 7017943747864084595}
   - component: {fileID: 7017943747864084599}
   m_Layer: 0
   m_Name: 12Plane (4)
@@ -1287,6 +1154,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1311,20 +1179,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7017943747864084595
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7017943747864084594}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &7017943747864084599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1337,4 +1192,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38686bf22ad67c41937bab795f9df35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materials: []
   customMaterial: {fileID: 2100000, guid: c8b078e5907ac2b409ce164677c03680, type: 2}

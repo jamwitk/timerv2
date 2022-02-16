@@ -3,14 +3,11 @@ using Audio;
 using UnityEngine;
 using Clocks;
 using Score;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 namespace Game
 {
     public class GameManager : MonoBehaviour
     {
-        //Scripts
         public Player.Player player;
         public CameraShaking cameraShaking;
         public ClockController clockController;
@@ -19,14 +16,11 @@ namespace Game
         public MaterialManager materialManager;
 
         public ScoreManager scoreManager;
-        //Objects
         public ParticleSystem particle;
-        //Inputs
         [HideInInspector] public bool isAndroid , isWindows;
         private bool isParticleStopped, isWorking;
 
         public bool isGame;
-        //Instance
         public static GameManager instance;
         private const float GravityModifier = 10;
 
