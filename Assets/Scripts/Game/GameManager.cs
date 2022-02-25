@@ -2,50 +2,38 @@
 using Audio;
 using UnityEngine;
 using Clocks;
-using Score;
+using Main_Scene;
+using Main_Scene.Score;
+using Main_Scene.UI;
+using Main_Scene.Character;
 
 namespace Game
 {
-    public class GameManager : MonoBehaviour
+    public class GameManager : Singleton<GameManager>
     {
-        public Player.Player player;
-        public CameraShaking cameraShaking;
+        public Player player;
         public ClockController clockController;
         public Menu menu;
-
+        public FadingPanel gameOverPanel;
         public MaterialManager materialManager;
-
-        public ScoreManager scoreManager;
         public ParticleSystem particle;
-        [HideInInspector] public bool isAndroid , isWindows;
-        private bool isParticleStopped, isWorking;
+        private bool _isParticleStopped, _isWorking;
 
         public bool isGame;
-        public static GameManager instance;
         private const float GravityModifier = 10;
-
-        private void Awake()
-        {
-            #region Singleton
-            if (instance == null)
-            {
-                instance = this;
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
         
-
-            #endregion
-
-            #region ApplicationSettings
-
+        private void Start()
+        {
             Physics.gravity *= GravityModifier;
-            Application.targetFrameRate = 60;
-            
+            GetAndSetAllScoreToText();
+        }
 
-            #endregion
+        private void GetAndSetAllScoreToText()
+        {
+            if (menu.allScoreText.text.Length == 0)
+            {
+                menu.allScoreText.text = ScoreManager.Instance.GetAllScore().ToString();
+            }
         }
         public void RestartGame()
         {
@@ -55,41 +43,48 @@ namespace Game
             clockController.SetClocksRotationDefault();
             if (player != null) player.Reset();
             if (materialManager != null) materialManager.Reset();
-            if (scoreManager != null) scoreManager.ResetText();
+            gameOverPanel.FadeOut(0.5f);
+            menu.allScoreText.text = ScoreManager.Instance.GetAllScore().ToString();
+            ScoreManager.Instance.ResetText();
         }
         public void FinishGame()
         {
             if (!isGame) return;
             isGame = false;
-            cameraShaking.CameraShake();
+            CameraController.Instance.Shake();
             AudioManager.Instance.Play("Punch");
             menu.gamePanel.SetActive(false);
             player.Reset();
-            StartCoroutine(GameManager.instance.DelayGameOverPanel());
-            
+            ScoreManager.Instance.SaveMoney("money");
+            SetScoreToText(ScoreManager.Instance.score,ScoreManager.Instance.GetAllScore());
+            gameOverPanel.FadeIn(1f);
+            //StartCoroutine(DelayGameOverPanel());
+            ScoreManager.Instance.ResetText();
         }
-    
-        public IEnumerator DelayGameOverPanel()
+
+       
+        
+        private IEnumerator DelayGameOverPanel()
         {
-            if(isWorking) yield break;
-            isWorking = true;
+            if(_isWorking) yield break;
+            _isWorking = true;
 
             yield return new WaitForSecondsRealtime(0.75f);
 
             menu.gameOverPanel.SetActive(true);
-            isWorking = false;
+            _isWorking = false;
         }
         public IEnumerator StopParticle()
         {
-            if(isParticleStopped) yield break;
+            if(_isParticleStopped) yield break;
         
-            isParticleStopped = true;
+            _isParticleStopped = true;
         
             yield return new WaitForSeconds(0.4f);
         
             particle.Stop();
         
-            isParticleStopped = false;
+            _isParticleStopped = false;
         }
         public void PlayParticle()
         {
@@ -100,7 +95,8 @@ namespace Game
         {
             menu.gameScoreText.text = score.ToString();
         }
-        public void SetScoreToText(int score,int totalScore)
+
+        private void SetScoreToText(int score,int totalScore)
         {
             menu.gameOverScoreText.text = $" YOUR SCORE :     {score}";
             menu.gameOverTotalScoreText.text = $" TOTAL SCORE  :     {totalScore}";

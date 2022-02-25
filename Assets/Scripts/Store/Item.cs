@@ -1,9 +1,13 @@
 using UnityEngine;
 
-public class Item : MonoBehaviour
+namespace Store
 {
-    public string itemName;
-    public GameObject selectedText;
-    public int price;
-    public Color color;
+    public class Item : MonoBehaviour
+    {
+        public string itemName;
+        public GameObject selectedText;
+        public int price;
+        public Color color;
+    } 
 }
+

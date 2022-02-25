@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Main_Scene.Character;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -6,9 +7,7 @@ namespace Game
 {
     public class MaterialManager : MonoBehaviour
     {
-         public Player.Player player;
 
-        // public ChangeMaterial[] planes;
          public List<ChangeMaterial> planes;
          public int random;
 
@@ -34,7 +33,7 @@ namespace Game
             random = GetRandomMaterialIndex();
             for (var i = 0; i < 12; i++)
             {
-                planes[i].RandomMaterial(random);
+                planes[i].SetRandomMaterial(random);
             }
         }
 
@@ -54,7 +53,7 @@ namespace Game
         public void SetNewTarget()
         {
             random = GetRandomCustomIndex();
-            planes[random].ChangeToCustom();
+            planes[random].ChangeMaterialToCustom();
         }
     }
 }

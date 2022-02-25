@@ -5,17 +5,16 @@ using Game;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Score
+namespace Main_Scene.Score
 {
-    public class ScoreManager : MonoBehaviour
+    public class ScoreManager : Singleton<ScoreManager>
     {
-        public const string ScoreKey = "scoreKey";
 
         [SerializeField] private ClockController clockController;
         [SerializeField] private int scorePoint = 46;
         public GameObject scoreComboObject;
         public Text scoreTxt,scoreComboTxt,totalScoreText;
-        [NonSerialized] public int Score;
+        [NonSerialized] public int score;
         [NonSerialized] private int _scoreIncrease = 1;
         [NonSerialized] public int ScoreCombo;
         [NonSerialized] private int _score;
@@ -25,9 +24,9 @@ namespace Score
         }
         public void ScoreCalculation()
         {
-            Score += scorePoint * _scoreIncrease; 
+            score += scorePoint * _scoreIncrease; 
             _score += (scorePoint * _scoreIncrease);
-            GameManager.instance.SetScoreToTextRuntime(Score);
+            GameManager.Instance.SetScoreToTextRuntime(score);
             if (ScoreCombo != 4) return;
             _scoreIncrease += 1; 
             ScoreCombo = 0; 
@@ -36,24 +35,17 @@ namespace Score
             PunchText(scoreComboObject.transform);
         }
 
-        public void AddToLeaderBoard()
+       
+
+        public void SaveMoney(string key)
         {
-            
+            FileManager.Instance.SaveData(key,GetAllScore()+score);
         }
 
-        private static void SaveScore(string key,int score)
+       
+        public int GetAllScore()
         {
-            PlayerPrefs.SetInt(key,score);
-            PlayerPrefs.Save();
-        }
-
-        public void SetTotalScoreTextBox(string key,Text totalScoreTextBox)
-        {
-            totalScoreText.text = (GetScore(key) + Score).ToString();
-        }
-        private static int GetScore(string key)
-        {
-            return PlayerPrefs.GetInt(key, 0);
+            return FileManager.Instance.GetIntData("money");
         }
         private void Update()
         {
@@ -64,14 +56,12 @@ namespace Score
 
         public void ResetText()
         {
-            SaveScore(ScoreKey, Score);
-            Score = 0;
+            
+            score = 0;
             _score = 0;
             _scoreIncrease = 1;
             ScoreCombo = 0;
-            scoreComboObject.SetActive(false);
-            scoreTxt.text = "" + Score;
-            
+            scoreTxt.text = "" + score;
         }
 
         private void PunchText(Transform comboText)
@@ -79,4 +69,6 @@ namespace Score
             comboText.DOPunchScale(transform.localScale, 0.7f);
         }
     }
+
+    
 }

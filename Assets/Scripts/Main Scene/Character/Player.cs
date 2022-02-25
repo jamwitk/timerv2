@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using Game;
+﻿using Game;
 using UnityEngine;
 
-namespace Player
+namespace Main_Scene.Character
 {
     //[RequireComponent(typeof(Rigidbody))]
     public class Player : MonoBehaviour
@@ -22,7 +21,7 @@ namespace Player
         }
         private void Update()
         {
-            if(!GameManager.instance.isGame) return;
+            if(!GameManager.Instance.isGame) return;
             //Move();
             if(transform.position.y <= -1)
             {
@@ -31,7 +30,7 @@ namespace Player
         }
         private void FixedUpdate()
         {
-            if (!GameManager.instance.isGame) return;
+            if (!GameManager.Instance.isGame) return;
             if (isGrounded && !isCrunched) isGrounded = false;
         }
         

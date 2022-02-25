@@ -57,7 +57,7 @@ namespace Clocks
         }
         private void Update()
         {
-            if (!GameManager.instance.isGame) return;
+            if (!GameManager.Instance.isGame) return;
             RotateClock();
         }
         

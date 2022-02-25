@@ -1,7 +1,7 @@
 ﻿using System;
 using Audio;
 using Game;
-using Score;
+using Main_Scene.Score;
 using UnityEngine;
 
 namespace Main_Scene.Player
@@ -18,18 +18,18 @@ namespace Main_Scene.Player
 
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
-            if (!GameManager.instance.isGame) return;
+            if (!GameManager.Instance.isGame) return;
             
             switch (hit.gameObject.tag)
             {
                 case "12Planes":
                     if (hit.gameObject.name == "12Plane"+_materialManager.random)
                     {
-                        GameManager.instance.PlayParticle();
-                        GameManager.instance.particle.transform.position = transform.position;
-                        StartCoroutine(GameManager.instance.StopParticle());
+                        GameManager.Instance.PlayParticle();
+                        GameManager.Instance.particle.transform.position = transform.position;
+                        StartCoroutine(GameManager.Instance.StopParticle());
                         AudioManager.Instance.Play("JumpPlane");
-                        _materialManager.planes[_materialManager.random].GetComponent<ChangeMaterial>().SetToDefault();
+                        _materialManager.planes[_materialManager.random].GetComponent<ChangeMaterial>().SetMaterialToDefault();
                         _materialManager.SetNewTarget();
                         _scoreManager.ScoreCombo++;
                         _scoreManager.ScoreCalculation();
@@ -37,7 +37,7 @@ namespace Main_Scene.Player
                     break;
                 case "Clock":
                 {
-                    GameManager.instance.FinishGame();
+                    GameManager.Instance.FinishGame();
                     break;
                 }
             }

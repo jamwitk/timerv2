@@ -1,11 +1,9 @@
-using System;
+using Main_Scene;
 using TMPro;
 using UnityEngine;
 
 namespace Store
 {
-
-
     public class StoreController : MonoBehaviour
     {
         private int _money;
@@ -24,10 +22,9 @@ namespace Store
                 PlayerPrefs.SetInt("yellow", (int) Purchasing.Purchased);
             }
 
-            _money = PlayerPrefs.GetInt("money", 0);
-            _money = 9999;
+            
 
-            moneyText.text = _money + "$";
+            moneyText.text = FileManager.Instance.GetIntData("money") + "$";
             CheckSelectedItem();
             CheckPurchasedItem();
         }

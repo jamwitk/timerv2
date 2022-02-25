@@ -3,13 +3,12 @@ using UnityEngine;
 
 namespace Audio
 {
-    public class AudioManager : MonoBehaviour
+    public class AudioManager : Singleton<AudioManager>
     {
-        private bool _isPlaying;
         public Sounds[] sounds;
-        public static AudioManager Instance;
-        private void Awake()
-        {
+       
+        private void Start()
+        { 
             foreach (var s in sounds)
             {
                 s.source = gameObject.AddComponent<AudioSource>();
@@ -20,19 +19,6 @@ namespace Audio
                 s.source.loop = s.loop;
                 s.source.playOnAwake = s.PlayOnAwake;
             }
-
-            if (Instance == null)
-            {
-                Instance = this;
-                DontDestroyOnLoad(gameObject);
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-        }
-        private void Start()
-        { 
             Play("Track");
         }
 
