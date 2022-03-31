@@ -1,11 +1,9 @@
 ﻿using System.Collections.Generic;
-using Main_Scene.Character;
-using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace Game
 {
-    public class MaterialManager : MonoBehaviour
+    public class MaterialManager : Singleton<MaterialManager>
     {
 
          public List<ChangeMaterial> planes;

@@ -2,6 +2,7 @@
 using Game;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Main_Scene.UI
@@ -37,6 +38,12 @@ namespace Main_Scene.UI
             }
         }
 
+        public void OnClickBackToMenuSceneButton()
+        {
+            Physics.gravity /= GamePhysics.GetGravityModifier();
+            Time.timeScale = 1;
+            SceneManager.LoadScene(0);
+        }
         public void OnClickRestartGameButton()
         {
             gameScoreComboText.gameObject.SetActive(false);

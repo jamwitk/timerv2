@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PlayGamesService : MonoBehaviour
 {
     public int playerScore;
-    string leaderboardID = "CgkIpK-z4ukVEAIQAQ";
+    string leaderboardID = "";
     string achievementID = "";
     public static PlayGamesPlatform platform;
     public Text screenText;

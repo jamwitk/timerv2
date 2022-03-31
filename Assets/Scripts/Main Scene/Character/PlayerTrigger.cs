@@ -1,6 +1,8 @@
 ﻿using System;
 using Audio;
 using Game;
+using Main_Scene.Boosters;
+using Main_Scene.Character;
 using Main_Scene.Score;
 using UnityEngine;
 
@@ -32,12 +34,18 @@ namespace Main_Scene.Player
                         _materialManager.planes[_materialManager.random].GetComponent<ChangeMaterial>().SetMaterialToDefault();
                         _materialManager.SetNewTarget();
                         _scoreManager.ScoreCombo++;
-                        _scoreManager.ScoreCalculation();
+                        _scoreManager.CalculateScore();
                     }
                     break;
                 case "Clock":
                 {
                     GameManager.Instance.FinishGame();
+                    break;
+                }
+                case "Booster": // TODO: ADD BOOSTERS TO OBJECT POOLING
+                {
+                    BoosterManager.Instance.SetProperty(hit.gameObject.GetComponent<Booster>().property);
+                    Destroy(hit.gameObject);
                     break;
                 }
             }

@@ -13,7 +13,7 @@ namespace Main_Scene.Score
         [SerializeField] private ClockController clockController;
         [SerializeField] private int scorePoint = 46;
         public GameObject scoreComboObject;
-        public Text scoreTxt,scoreComboTxt,totalScoreText;
+        public Text scoreTxt,scoreComboTxt;
         [NonSerialized] public int score;
         [NonSerialized] private int _scoreIncrease = 1;
         [NonSerialized] public int ScoreCombo;
@@ -22,7 +22,7 @@ namespace Main_Scene.Score
         {
             DOTween.Init();
         }
-        public void ScoreCalculation()
+        public void CalculateScore()
         {
             score += scorePoint * _scoreIncrease; 
             _score += (scorePoint * _scoreIncrease);

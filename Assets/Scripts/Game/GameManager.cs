@@ -2,29 +2,38 @@
 using Audio;
 using UnityEngine;
 using Clocks;
-using Main_Scene;
+using Main_Scene.Boosters;
 using Main_Scene.Score;
 using Main_Scene.UI;
 using Main_Scene.Character;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 namespace Game
 {
+    public static class GamePhysics
+    {
+        private const float GravityModifier = 10;
+
+        public static float GetGravityModifier()
+        {
+            return GravityModifier;
+        }
+    }
+
     public class GameManager : Singleton<GameManager>
     {
-        public Player player;
+        public PlayerMovement playerMovement;
         public ClockController clockController;
         public Menu menu;
         public FadingPanel gameOverPanel;
-        public MaterialManager materialManager;
         public ParticleSystem particle;
-        private bool _isParticleStopped, _isWorking;
-
+        private bool _isParticleStopped;
+        public UnityEvent onFinishTheGame;
         public bool isGame;
-        private const float GravityModifier = 10;
-        
         private void Start()
         {
-            Physics.gravity *= GravityModifier;
+            Physics.gravity *= GamePhysics.GetGravityModifier();
             GetAndSetAllScoreToText();
         }
 
@@ -41,8 +50,8 @@ namespace Game
             if (clockController == null) return;
             clockController.SetClocksSpeedDefault();
             clockController.SetClocksRotationDefault();
-            if (player != null) player.Reset();
-            if (materialManager != null) materialManager.Reset();
+            if (playerMovement != null) playerMovement.ResetPlayerPhysic();
+            MaterialManager.Instance.Reset();
             gameOverPanel.FadeOut(0.5f);
             menu.allScoreText.text = ScoreManager.Instance.GetAllScore().ToString();
             ScoreManager.Instance.ResetText();
@@ -51,28 +60,14 @@ namespace Game
         {
             if (!isGame) return;
             isGame = false;
-            CameraController.Instance.Shake();
-            AudioManager.Instance.Play("Punch");
+            onFinishTheGame.Invoke();
             menu.gamePanel.SetActive(false);
-            player.Reset();
+            playerMovement.ResetPlayerPhysic();
             ScoreManager.Instance.SaveMoney("money");
             SetScoreToText(ScoreManager.Instance.score,ScoreManager.Instance.GetAllScore());
             gameOverPanel.FadeIn(1f);
-            //StartCoroutine(DelayGameOverPanel());
             ScoreManager.Instance.ResetText();
-        }
-
-       
-        
-        private IEnumerator DelayGameOverPanel()
-        {
-            if(_isWorking) yield break;
-            _isWorking = true;
-
-            yield return new WaitForSecondsRealtime(0.75f);
-
-            menu.gameOverPanel.SetActive(true);
-            _isWorking = false;
+            BoosterManager.Instance.SetDefaultPlayerProperties();
         }
         public IEnumerator StopParticle()
         {
