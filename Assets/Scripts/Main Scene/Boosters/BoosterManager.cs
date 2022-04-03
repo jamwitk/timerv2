@@ -12,19 +12,22 @@ namespace Main_Scene.Boosters
         [SerializeField] private PlayerMovement playerMovement;
         [SerializeField] private List<PlayerProperties> boosters;
         [SerializeField] private List<GameObject> boosterPrefabs;
+        [SerializeField] private float boosterGenerateTimer;
         private void Start()
         {
             SetDefaultPlayerProperties();
             StartCoroutine(Generate());
+            GameManager.Instance.OnFinishGame += SetDefaultPlayerProperties;
         }
         private IEnumerator Generate()
         {
             if (!GameManager.Instance.isGame) yield break;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(boosterGenerateTimer);
             Instantiate(boosterPrefabs[Random.Range(0, boosterPrefabs.Count - 1)],
                 MaterialManager.Instance.planes[Random.Range(0,MaterialManager.Instance.planes.Count-1)].transform.position,Quaternion.identity);
         }
-        public void SetDefaultPlayerProperties()
+
+        private void SetDefaultPlayerProperties()
         {
             playerMovement.SetPlayerProperties(boosters[0]);
         }
@@ -33,7 +36,6 @@ namespace Main_Scene.Boosters
         {
             playerMovement.SetPlayerProperties(property);
             StartCoroutine(Generate());
-
         }
     }
 }

@@ -1,13 +1,10 @@
 ﻿using System.Collections;
-using Audio;
 using UnityEngine;
 using Clocks;
-using Main_Scene.Boosters;
 using Main_Scene.Score;
 using Main_Scene.UI;
 using Main_Scene.Character;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
 namespace Game
 {
@@ -26,48 +23,36 @@ namespace Game
         public PlayerMovement playerMovement;
         public ClockController clockController;
         public Menu menu;
-        public FadingPanel gameOverPanel;
         public ParticleSystem particle;
         private bool _isParticleStopped;
-        public UnityEvent onFinishTheGame;
         public bool isGame;
+
+        public event UnityAction OnFinishGame;
+        public event UnityAction OnRestartGame;
+       
         private void Start()
         {
             Physics.gravity *= GamePhysics.GetGravityModifier();
             GetAndSetAllScoreToText();
         }
-
         private void GetAndSetAllScoreToText()
         {
             if (menu.allScoreText.text.Length == 0)
             {
-                menu.allScoreText.text = ScoreManager.Instance.GetAllScore().ToString();
+                menu.allScoreText.text = ScoreManager.GetAllScore().ToString();
             }
         }
         public void RestartGame()
         {
             isGame = true;
-            if (clockController == null) return;
-            clockController.SetClocksSpeedDefault();
-            clockController.SetClocksRotationDefault();
-            if (playerMovement != null) playerMovement.ResetPlayerPhysic();
-            MaterialManager.Instance.Reset();
-            gameOverPanel.FadeOut(0.5f);
-            menu.allScoreText.text = ScoreManager.Instance.GetAllScore().ToString();
-            ScoreManager.Instance.ResetText();
+            OnRestartGame?.Invoke();
+            menu.allScoreText.text = ScoreManager.GetAllScore().ToString();
         }
         public void FinishGame()
         {
-            if (!isGame) return;
             isGame = false;
-            onFinishTheGame.Invoke();
-            menu.gamePanel.SetActive(false);
-            playerMovement.ResetPlayerPhysic();
-            ScoreManager.Instance.SaveMoney("money");
-            SetScoreToText(ScoreManager.Instance.score,ScoreManager.Instance.GetAllScore());
-            gameOverPanel.FadeIn(1f);
-            ScoreManager.Instance.ResetText();
-            BoosterManager.Instance.SetDefaultPlayerProperties();
+            OnFinishGame?.Invoke();
+            SetScoreToText(ScoreManager.Instance.score,ScoreManager.GetAllScore());
         }
         public IEnumerator StopParticle()
         {

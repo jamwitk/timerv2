@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Random = UnityEngine.Random;
 
 namespace Game
@@ -13,9 +14,15 @@ namespace Game
         {
             SettingDefaultMaterials();
             SetNewTarget();
+            GameManager.Instance.OnRestartGame += Reset;
         }
 
-        private int GetRandomMaterialIndex()
+         private void OnDestroy()
+         {
+             GameManager.Instance.OnRestartGame -= Reset;
+         }
+
+         private int GetRandomMaterialIndex()
         {
             return Random.Range(0, planes[0].materials.Length);
         }

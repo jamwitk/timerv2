@@ -1,29 +1,33 @@
 
+using System;
 using DG.Tweening;
+using Game;
 using UnityEngine;
 
 public class FadingPanel : MonoBehaviour
 {
     [SerializeField] private CanvasGroup canvasGroup;
     private Tween _fadeTween;
-
-    public void FadeIn(float duration)
+    [SerializeField] private readonly float _duration = 1; 
+    private void OnEnable()
     {
-        Fade(1f,duration, () =>
+        Fade(1f,_duration, () =>
         {
             canvasGroup.interactable = true;
             canvasGroup.blocksRaycasts = true;
         });
     }
 
-    public void FadeOut(float duration)
+    private void OnDisable()
     {
-        Fade(0f,duration,() =>
+        Fade(0f,_duration,() =>
         {
             canvasGroup.interactable = false;
             canvasGroup.blocksRaycasts = false;
         });
     }
+
+    
     private void Fade(float endValue, float duration,TweenCallback onEnd)
     {
         _fadeTween?.Kill(false);

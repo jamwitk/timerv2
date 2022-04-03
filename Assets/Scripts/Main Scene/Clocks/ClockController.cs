@@ -19,6 +19,15 @@ namespace Clocks
                     speeds[i] = clocks[i].speed;
                 }
             }
+
+            GameManager.Instance.OnRestartGame += SetClocksRotationDefault;
+            GameManager.Instance.OnRestartGame += SetClocksSpeedDefault;
+        }
+
+        private void OnDestroy()
+        {
+            GameManager.Instance.OnRestartGame -= SetClocksRotationDefault;
+            GameManager.Instance.OnRestartGame -= SetClocksSpeedDefault;
         }
 
         public void SetClocksRotationDefault()

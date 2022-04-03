@@ -1,12 +1,10 @@
-﻿using System;
-using Audio;
+﻿using Audio;
 using Game;
 using Main_Scene.Boosters;
-using Main_Scene.Character;
 using Main_Scene.Score;
 using UnityEngine;
 
-namespace Main_Scene.Player
+namespace Main_Scene.Character
 {
     public class PlayerTrigger : MonoBehaviour
     {

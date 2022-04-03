@@ -1,4 +1,5 @@
 ﻿using System;
+using Game;
 using UnityEngine;
 
 namespace Audio
@@ -20,12 +21,23 @@ namespace Audio
                 s.source.playOnAwake = s.PlayOnAwake;
             }
             Play("Track");
+            GameManager.Instance.OnFinishGame += OnFinishGame;
         }
 
-        public void Play(string nameM)
+        private void OnDestroy()
         {
-            var s = Array.Find(sounds, sound => sound.name == nameM);
+            GameManager.Instance.OnFinishGame -= OnFinishGame;
+        }
+
+        public void Play(string audioName)
+        {
+            var s = Array.Find(sounds, sound => sound.name == audioName);
             s.source.Play();
+        }
+
+        private void OnFinishGame()
+        {
+            Play("Punch");
         }
     }
 }

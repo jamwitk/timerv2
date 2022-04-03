@@ -1,5 +1,5 @@
-﻿using DG.Tweening;
-using UnityEngine;
+﻿using System;
+using DG.Tweening;
 
 namespace Game
 {
@@ -11,6 +11,12 @@ namespace Game
         private void Start()
         {
             DOTween.Init();
+            GameManager.Instance.OnFinishGame += Shake;
+        }
+
+        private void OnDestroy()
+        {
+            GameManager.Instance.OnFinishGame -= Shake;
         }
 
         public void Shake()

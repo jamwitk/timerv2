@@ -1,3 +1,4 @@
+using System;
 using Game;
 using Scriptable_Objects;
 using UnityEngine;
@@ -18,11 +19,17 @@ namespace Main_Scene.Character
         #region Events
         private void Start()
         {
+            GameManager.Instance.OnFinishGame += ResetPlayerPhysic;
             _cachedMoveSpeed = playerProperties.movementSpeed;
             _defaultPosition = transform.localPosition;
             _characterController = GetComponent<CharacterController>();
-            
         }
+
+        private void OnDestroy()
+        {
+            GameManager.Instance.OnFinishGame -= ResetPlayerPhysic;
+        }
+
         private void Update()
         {
             _ySpeed += Physics.gravity.y * Time.deltaTime;

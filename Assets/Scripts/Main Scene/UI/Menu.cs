@@ -1,4 +1,5 @@
-﻿using Audio;
+﻿using System;
+using Audio;
 using Game;
 using TMPro;
 using UnityEngine;
@@ -17,6 +18,18 @@ namespace Main_Scene.UI
         public Text gameScoreText;
         public Text gameScoreComboText;
         public TMP_Text allScoreText;
+
+        private void Start()
+        {
+            GameManager.Instance.OnFinishGame += OnFinishGame;
+        }
+
+
+        private void OnFinishGame()
+        {
+            gamePanel.SetActive(false);
+            gameOverPanel.SetActive(true);
+        }
 
         public void OnPausePanelButton()
         {
@@ -48,6 +61,7 @@ namespace Main_Scene.UI
         {
             gameScoreComboText.gameObject.SetActive(false);
             gamePanel.SetActive(true);
+            gameOverPanel.SetActive(false);
             GameManager.Instance.RestartGame();
 
         }

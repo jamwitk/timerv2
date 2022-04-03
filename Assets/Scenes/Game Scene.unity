@@ -1468,33 +1468,6 @@ MonoBehaviour:
   menu: {fileID: 910356857}
   gameOverPanel: {fileID: 582534864}
   particle: {fileID: 7416306261999278817}
-  onFinishTheGame:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 963194229}
-        m_TargetAssemblyTypeName: Game.CameraController, Assembly-CSharp
-        m_MethodName: Shake
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 7027681516190293847}
-        m_TargetAssemblyTypeName: Audio.AudioManager, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Punch
-          m_BoolArgument: 0
-        m_CallState: 2
   isGame: 1
 --- !u!1 &416440195
 GameObject:
@@ -4812,6 +4785,7 @@ MonoBehaviour:
   - {fileID: 7265165812343527963, guid: 31230a41c1152c145930bacac7a00f23, type: 3}
   - {fileID: 7265165812343527963, guid: 31230a41c1152c145930bacac7a00f23, type: 3}
   - {fileID: 7265165812343527963, guid: 31230a41c1152c145930bacac7a00f23, type: 3}
+  boosterGenerateTimer: 0
 --- !u!65 &1867542712
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5653,18 +5627,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f45381402281324caa9b04e72d295e9, type: 3}
---- !u!114 &7027681516190293847 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7027681515357129731, guid: 0f45381402281324caa9b04e72d295e9,
-    type: 3}
-  m_PrefabInstance: {fileID: 7027681516190293846}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 583339a068eb2824d914b8f6569d4088, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &7400049671748471576
 MeshRenderer:
   m_ObjectHideFlags: 0

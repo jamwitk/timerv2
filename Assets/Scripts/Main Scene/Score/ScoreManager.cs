@@ -21,7 +21,21 @@ namespace Main_Scene.Score
         private void Start()
         {
             DOTween.Init();
+            GameManager.Instance.OnFinishGame += OnFinishGame;
+            GameManager.Instance.OnFinishGame += ResetText;
         }
+
+        private void OnDestroy()
+        {
+            GameManager.Instance.OnFinishGame -= OnFinishGame;
+            GameManager.Instance.OnFinishGame -= ResetText; 
+        }
+
+        private void OnFinishGame()
+        {
+            SaveMoney("money");
+        }
+
         public void CalculateScore()
         {
             score += scorePoint * _scoreIncrease; 
@@ -43,7 +57,7 @@ namespace Main_Scene.Score
         }
 
        
-        public int GetAllScore()
+        public static int GetAllScore()
         {
             return FileManager.Instance.GetIntData("money");
         }
@@ -68,6 +82,7 @@ namespace Main_Scene.Score
         {
             comboText.DOPunchScale(transform.localScale, 0.7f);
         }
+        
     }
 
     
