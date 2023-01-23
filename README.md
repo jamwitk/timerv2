@@ -27,4 +27,4 @@ This project was developed during a game jam event, but contributions are welcom
 
 ## Contact
 
-If you have any questions or suggestions, please contact the repository owner.
+If you have any questions or suggestions, please contact me.
