@@ -8,6 +8,11 @@ This Unity game is a product of a game jam event where the theme was "Time". The
 - Intuitive controls
 - Increasing difficulty
 
+## Play Store URL
+```
+https://play.google.com/store/apps/details?id=com.natu.jimer
+```
+
 ## Getting Started
 
 1. Clone the repository
