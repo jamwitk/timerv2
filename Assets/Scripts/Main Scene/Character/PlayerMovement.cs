@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using Game;
+using Main_Scene.Boosters;
 using Scriptable_Objects;
 using UnityEngine;
 
@@ -69,7 +71,15 @@ namespace Main_Scene.Character
 
         public void SetPlayerProperties(PlayerProperties property)
         {
+            var defaultProperty = BoosterManager.Instance.boosters[0];
+            print("Property: " + property.boosterName);
             playerProperties = property;
+            StartCoroutine(DeActivateBooster(defaultProperty, property.duration));
+        }
+        IEnumerator DeActivateBooster(PlayerProperties previousProperty,float duration)
+        {
+            yield return new WaitForSeconds(duration);
+            playerProperties = previousProperty;
         }
         #region Mechanics
 

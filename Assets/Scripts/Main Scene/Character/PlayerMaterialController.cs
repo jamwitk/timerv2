@@ -12,7 +12,7 @@ namespace Main_Scene.Character
 
         private static Color GetSelectedColor()
         {
-            var storedColorAsString = "#" + PlayerPrefs.GetString("selectedColor");
+            var storedColorAsString = "#" + PlayerPrefs.GetString("selectedColor","ffd700");
             ColorUtility.TryParseHtmlString(storedColorAsString, out var result);
             return result;
         }

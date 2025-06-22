@@ -1,7 +1,6 @@
 ﻿using Audio;
 using Game;
 using Main_Scene.Boosters;
-using Main_Scene.Score;
 using UnityEngine;
 
 namespace Main_Scene.Character
@@ -10,6 +9,7 @@ namespace Main_Scene.Character
     {
         private MaterialManager _materialManager;
         private ScoreManager _scoreManager;
+        
         private void Start()
         {
             _scoreManager = FindObjectOfType<ScoreManager>();
@@ -37,7 +37,9 @@ namespace Main_Scene.Character
                     break;
                 case "Clock":
                 {
-                    GameManager.Instance.FinishGame();
+                    
+                    //MessageBox.Instance.Show();
+                    //GameManager.Instance.FinishGame();
                     break;
                 }
                 case "Booster": // TODO: ADD BOOSTERS TO OBJECT POOLING
@@ -48,5 +50,6 @@ namespace Main_Scene.Character
                 }
             }
         }
+
     }
 }

@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b87917945f4cd91498419f283aff3d84, type: 3}
   m_Name: Jump And Speed Booster
   m_EditorClassIdentifier: 
+  boosterName: Jump and Speed
   movementSpeed: 12
   jumpForce: 50
   duration: 5
+  isImmortal: 0

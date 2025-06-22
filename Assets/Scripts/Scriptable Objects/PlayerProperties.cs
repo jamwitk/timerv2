@@ -3,10 +3,13 @@ using UnityEngine;
 namespace Scriptable_Objects
 {
     [CreateAssetMenu(fileName = "New Player Data", menuName = "Player Properties")]
-    public class PlayerProperties : ScriptableObject
+    public  class PlayerProperties : ScriptableObject
     {
+        public string boosterName;
         public float movementSpeed;
         public float jumpForce;
         public float duration;
+        public bool isImmortal;
+        
     }
 }

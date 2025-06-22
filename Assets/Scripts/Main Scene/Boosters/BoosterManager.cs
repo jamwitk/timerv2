@@ -10,7 +10,7 @@ namespace Main_Scene.Boosters
     public class BoosterManager : Singleton<BoosterManager>
     {
         [SerializeField] private PlayerMovement playerMovement;
-        [SerializeField] private List<PlayerProperties> boosters;
+        [SerializeField] public List<PlayerProperties> boosters;
         [SerializeField] private List<GameObject> boosterPrefabs;
         [SerializeField] private float boosterGenerateTimer;
         private void Start()

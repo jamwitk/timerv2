@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
 using Clocks;
-using Main_Scene.Score;
 using Main_Scene.UI;
 using Main_Scene.Character;
 using UnityEngine.Events;
